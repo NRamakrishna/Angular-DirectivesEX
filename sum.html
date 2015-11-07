@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Arithmatic calculation</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div ng-controller="mainCtrl">
+		<label>First number:</label>
+		<input type="number" ng-model="mainCtrl.num1" /><br>
+		<label>Last number:</label>
+		<input type="number" ng-model="mainCtrl.num2" />
+		<hr>
+		<h1>Sum: {{mainCtrl.num1 + mainCtrl.num2}}</h1>
+		<h1>Product: {{mainCtrl.num1 * mainCtrl.num2}}</h1>
+	</div>
+
+</body>
+</html>

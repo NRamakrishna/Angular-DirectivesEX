@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js">
+        </script>
+        <script src="hiding.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl as main">
+      <h2>ToDo List</h2>
+      <ul>
+        <li ng-repeat="task in main.tasks">
+          <input type="checkbox" ng-model="task.done" />
+          <span ng-if="!task.done">{{task.name}}</span>
+        </li>
+      </ul>
+    </body>
+</html>
