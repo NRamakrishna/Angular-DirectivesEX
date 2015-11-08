@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script type="text/javascript" src="filter.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl as main">
+<h2>Contact List</h2>
+<hr />
+<label>Search for:<input type="text" ng-model="searchfor" /></label>
+<div ng-repeat="person in main.people | filter:searchfor">
+	<p>
+		{{person.name}}<br />
+		{{person.phone}}
+	</p>
+</div>
+
+</body>
+</html>
